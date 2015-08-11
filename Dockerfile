@@ -22,7 +22,7 @@ RUN cd /opt/ \
 # Installing Apache Tomcat.
 RUN cd /opt/ \
 	&& wget http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz \
-	&& tar zxf tomcat-${TOMCAT_VERSION}.tar.gz \
+	&& tar zxf apache-tomcat-${TOMCAT_VERSION}.tar.gz \
 	&& ln -s /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat \
 	&& rm -f apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
