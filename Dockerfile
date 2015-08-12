@@ -13,11 +13,10 @@ ENV PATH $JAVA_HOME/bin:$CATALINA_HOME/bin:$PATH
 
 # Installing JDK7
 RUN cd /opt/ \
-	&& wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie;" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.bin \
-	&& chmod +x jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.bin \
-	&& ./jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.bin \
+	&& wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie;" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.tar.gz \
+	&& tar zxf jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.tar.gz \
 	&& ln -s /opt/jdk1.${JDK_MAJOR}.0_${JDK_UPDATE} /opt/jdk \
-	&& rm -f jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.bin
+	&& rm -f jdk-${JDK_MAJOR}u${JDK_UPDATE}-linux-x64.tar.gz
 
 # Installing Apache Tomcat.
 RUN cd /opt/ \
