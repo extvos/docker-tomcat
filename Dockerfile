@@ -14,6 +14,8 @@ RUN cd /opt/ \
 	&& ln -s /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat \
 	&& rm -f apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
+COPY packages/server.xml $CATALINA_HOME/conf/server.xml
+
 VOLUME $CATALINA_HOME/webapps
 VOLUME $CATALINA_HOME/conf
 WORKDIR $CATALINA_HOME
