@@ -1,7 +1,5 @@
 FROM extvos/java:7
-
 MAINTAINER  "Mingcai SHEN <archsh@gmail.com>"
-
 ENV TOMCAT_MAJOR 5
 ENV TOMCAT_VERSION 5.5.36
 ENV CATALINA_HOME /opt/tomcat
