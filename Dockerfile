@@ -1,8 +1,7 @@
-FROM extvos/java:6
+FROM extvos/java:8
 MAINTAINER  "Mingcai SHEN <archsh@gmail.com>"
 ENV TOMCAT_MAJOR 5
 ENV TOMCAT_VERSION 5.5.36
-
 ENV CATALINA_HOME /opt/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 
